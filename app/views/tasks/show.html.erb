@@ -3,3 +3,7 @@
 <p><%= @task.completed%></p>
 <br>
 <%= link_to 'Back to list', '/tasks' %>
+<%= link_to "Delete",
+  tasks_path(@tasks),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
